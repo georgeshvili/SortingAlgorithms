@@ -1,8 +1,9 @@
 package simpleSort;
 
-public class BubbleSort extends Sorter {
+public class BubbleSort extends SimpleSorter {
 
-    public static <T extends Comparable<T>> T[] bubbleSort(T[] arr, Boolean increase){
+    @Override
+    protected <T extends Comparable<T>> T[] sort(T[] arr, Boolean increase){
 
         for(int i = 1; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -12,5 +13,4 @@ public class BubbleSort extends Sorter {
         }
         return arr;
     }
-
 }

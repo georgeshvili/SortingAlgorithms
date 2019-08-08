@@ -1,6 +1,6 @@
 package simpleSort;
 
-public class SelectionSort extends Sorter {
+public class SelectionSort extends SimpleSorter {
 
     private static <T extends Comparable<T>> int findMin(T[] arr, int begin, Boolean increase){
 
@@ -13,12 +13,11 @@ public class SelectionSort extends Sorter {
         return min;
     }
 
-    public static <T extends Comparable<T>> T[] selectionSort(T[] arr, Boolean increase){
+    protected <T extends Comparable<T>> T[] sort(T[] arr, Boolean increase){
 
         for(int i = 0; i < arr.length; i++){
             swap(arr, i, findMin(arr, i, increase));
         }
         return arr;
     }
-
 }
