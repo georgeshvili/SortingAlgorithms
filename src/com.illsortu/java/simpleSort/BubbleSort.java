@@ -1,18 +1,12 @@
 package simpleSort;
 
-public class BubbleSort {
+public class BubbleSort extends Sorter {
 
-    private static <T> void swap (T[] arr, int indexFirst, int indexSecond){
-        T tmp = arr[indexFirst];
-        arr[indexFirst] = arr[indexSecond];
-        arr[indexSecond] = tmp;
-    }
-
-    public static <T extends Comparable<T>> T[] bubbleSort(T[] arr, Boolean increasing){
+    public static <T extends Comparable<T>> T[] bubbleSort(T[] arr, Boolean increase){
 
         for(int i = 1; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[j].compareTo(arr[i]) > 0 == increasing)
+                if (arr[j].compareTo(arr[i]) > 0 == increase)
                     swap(arr, i, j);
             }
         }
