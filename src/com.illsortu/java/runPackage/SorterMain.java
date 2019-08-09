@@ -11,10 +11,16 @@ public class SorterMain {
     }
 
     private void runEffectiveSort(){
-        EffectiveSorter sorter = new QuickSort();
-        Integer[] arr = new Integer[] {5, 3, 10, 4, 8, 11, 2};
-        sorter.sortIncrease(arr);
-        Util.printArray(arr);
+        EffectiveSorter sorterFirst = new QuickSort();
+        Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        sorterFirst.sortIncrease(arrFirst);
+        Util.printArray(arrFirst);
+        System.out.println();
+
+        EffectiveSorter sorterSecond = new MergeSort();
+        Integer[] arrSecond = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        sorterSecond.sortDecrease(arrSecond);
+        Util.printArray(arrSecond);
     }
 
     private void runSimpleSort() {
