@@ -1,15 +1,23 @@
-package Main;
+package runPackage;
 
 import simpleSort.*;
+import effectiveSort.*;
 
 public class SorterMain {
 
     public static void main(String[] args) {
         SorterMain app = new SorterMain();
-        app.run();
+        app.runEffectiveSort();
     }
 
-    private void run() {
+    private void runEffectiveSort(){
+        EffectiveSorter sorter = new QuickSort();
+        Integer[] arr = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        sorter.sortIncrease(arr);
+        Util.printArray(arr);
+    }
+
+    private void runSimpleSort() {
         SimpleSorter sorterFirst = new InsertionSort();
         Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
         sorterFirst.sortIncrease(arrFirst);
