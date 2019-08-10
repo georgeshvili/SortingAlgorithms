@@ -2,7 +2,7 @@ package simpleSort;
 
 public class SelectionSort extends SimpleSorter {
 
-    private static <T extends Comparable<T>> int findMin(T[] arr, int begin, Boolean increase){
+    private <T extends Comparable<T>> int findMin(T[] arr, int begin, Boolean increase){
 
         int min = begin;
 

@@ -12,15 +12,17 @@ public class SorterMain {
 
     private void runEffectiveSort(){
         EffectiveSorter sorterFirst = new QuickSort();
-        Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        Integer[] arrFirst = new Integer[] {};
+        //Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        //Integer[] arrFirst = new Integer[] {99, 43, 77, 8, 10, 31, 24, 88, 55, 34, 42};
         sorterFirst.sortIncrease(arrFirst);
         Util.printArray(arrFirst);
         System.out.println();
 
-        EffectiveSorter sorterSecond = new MergeSort();
+        /*EffectiveSorter sorterSecond = new MergeSort();
         Integer[] arrSecond = new Integer[] {5, 3, 10, 4, 8, 11, 2};
         sorterSecond.sortDecrease(arrSecond);
-        Util.printArray(arrSecond);
+        Util.printArray(arrSecond);*/
     }
 
     private void runSimpleSort() {

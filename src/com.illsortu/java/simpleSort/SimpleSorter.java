@@ -11,10 +11,14 @@ public abstract class SimpleSorter implements Sortable {
     protected abstract <T extends Comparable<T>> T[] sort(T[] arr, Boolean increase);
 
     public <T extends Comparable<T>> T[] sortIncrease(T[] arr){
+        if(arr == null || arr.length <= 1)
+            return arr;
         return sort(arr, true);
     }
 
     public <T extends Comparable<T>> T[] sortDecrease(T[] arr){
+        if(arr == null || arr.length <= 1)
+            return arr;
         return sort(arr, false);
     }
 
