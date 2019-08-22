@@ -8,6 +8,7 @@ public abstract class SimpleSorter implements Sortable {
         arr[indexSecond] = tmp;
     }
 
+
     protected abstract <T extends Comparable<T>> T[] sort(T[] arr, Boolean increase);
 
     public <T extends Comparable<T>> T[] sortIncrease(T[] arr){

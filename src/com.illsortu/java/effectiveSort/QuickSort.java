@@ -5,15 +5,15 @@ public class QuickSort extends EffectiveSorter {
     private <T extends Comparable<T>> int chooseMedLomuto(T[] arr, int low, int high, Boolean increase)  {
 
         T med = arr[high];
-        int i = low - 1;
+        int i = low;
         for(int j = low; j < high; j++){
             if(arr[j].compareTo(med) < 0 == increase){
-                i++;
                 swap(arr, i, j);
+                i++;
             }
         }
-        swap(arr, i + 1, high);
-        return i + 1;
+        swap(arr, i, high);
+        return i;
     }
 
     private <T extends Comparable<T>> void recursiveSort(T[] arr, int low, int high, Boolean increase){

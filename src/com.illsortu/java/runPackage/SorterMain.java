@@ -2,20 +2,35 @@ package runPackage;
 
 import simpleSort.*;
 import effectiveSort.*;
+import stackSort.*;
+
+import java.util.Stack;
 
 public class SorterMain {
 
     public static void main(String[] args) {
         SorterMain app = new SorterMain();
-        app.runEffectiveSort();
+        //app.runSimpleSort();
+        //app.runEffectiveSort();
+        app.runStackSort();
+    }
+
+    private void runStackSort(){
+        StackSorter sorter = new StackSort();
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(82); stack.push(42);
+        stack.push(31); stack.push(96);
+        stack.push(45); stack.push(26);
+        stack.push(32); stack.push(23);
+        System.out.println(sorter.sortIncrease(stack));
     }
 
     private void runEffectiveSort(){
         EffectiveSorter sorterFirst = new QuickSort();
-        Integer[] arrFirst = new Integer[] {};
-        //Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
+        //Integer[] arrFirst = new Integer[] {};
+        Integer[] arrFirst = new Integer[] {5, 3, 10, 4, 8, 11, 2};
         //Integer[] arrFirst = new Integer[] {99, 43, 77, 8, 10, 31, 24, 88, 55, 34, 42};
-        sorterFirst.sortIncrease(arrFirst);
+        sorterFirst.sortDecrease(arrFirst);
         Util.printArray(arrFirst);
         System.out.println();
 
