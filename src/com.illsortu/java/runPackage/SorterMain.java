@@ -10,9 +10,9 @@ public class SorterMain {
 
     public static void main(String[] args) {
         SorterMain app = new SorterMain();
-        //app.runSimpleSort();
+        app.runSimpleSort();
         //app.runEffectiveSort();
-        app.runStackSort();
+        //app.runStackSort();
     }
 
     private void runStackSort(){
@@ -48,7 +48,7 @@ public class SorterMain {
         System.out.println();
 
         SimpleSorter sorterSecond = new BubbleSort();
-        String[] arrSecond = new String[] {"b", "a", "e", "c", "x", "y", "z"};
+        String[] arrSecond = new String[] {"b", "a", "e", "c", "x", "y", "z", "d", "i", "u"};
         sorterSecond.sortDecrease(arrSecond);
         Util.printArray(arrSecond);
         System.out.println();
